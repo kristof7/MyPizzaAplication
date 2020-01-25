@@ -12,25 +12,27 @@ public class Main {
 
         System.out.println("Write below two pizza cost/radius parameters to check, witch pizza is better to buy");
 
-        System.out.println("Write the pizza 1 cost:");
 
-        int pizzaCost = scanner.nextInt();
-        System.out.println("Write the pizza 1 radius:");
-
+        System.out.println("Write the pizza 1 diameter in cm:");
         int pizzaRadius = scanner.nextInt();
+        System.out.println("Write the pizza 1 cost:");
+        int pizzaCost = scanner.nextInt();
 
-        double pizzaSize = pizzaRadius*pizzaRadius*pi;
-        double pizzaToSize = pizzaCost / pizzaSize;
+
+        double pizzaSize = 4*pizzaRadius*pizzaRadius*pi;
+        double pizzaToSize = pizzaSize / pizzaCost;
 
         System.out.println("Pizza cost to size ratio is: "+pizzaToSize);
 
         Pizza pizza2 = new Pizza();
+
+        System.out.println("Write the pizza2 diameter in cm:");
+        int pizzaRadius2 = scanner.nextInt();
         System.out.println("Write the pizza2 cost:");
         int pizzaCost2 = scanner.nextInt();
-        System.out.println("Write the pizza2 radius:");
-        int pizzaRadius2 = scanner.nextInt();
-        double pizzaSize2 = pizzaRadius2*pizzaRadius2*pi;
-        double pizzaToSize2 = pizzaCost2 / pizzaSize2;
+
+        double pizzaSize2 = 4*pizzaRadius2*pizzaRadius2*pi;
+        double pizzaToSize2 = pizzaSize2 / pizzaCost2 ;
         System.out.println("Pizza cost to size ratio is: "+pizzaToSize2);
 
         if (pizzaToSize2 > pizzaSize) {
