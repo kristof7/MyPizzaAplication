@@ -10,34 +10,37 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+
+        //---comment for a user----
         System.out.println("Write below two pizza cost/radius parameters to check, witch pizza is better to buy");
-
-
-        System.out.println("Write the pizza 1 diameter in cm:");
+        //---pizza 1 diameter & cost to input----
+        System.out.println("Insert first pizza diameter:");
         int pizzaRadius = scanner.nextInt();
-        System.out.println("Write the pizza 1 cost:");
+        System.out.println("Insert first pizza cost:");
         int pizzaCost = scanner.nextInt();
 
 
         double pizzaSize = 4*pizzaRadius*pizzaRadius*pi;
         double pizzaToSize = pizzaSize / pizzaCost;
 
-        System.out.println("Pizza cost to size ratio is: "+pizzaToSize);
+        System.out.println("First pizza size to cost ratio is: "+pizzaToSize);
 
         Pizza pizza2 = new Pizza();
 
-        System.out.println("Write the pizza2 diameter in cm:");
+        //---pizza 2 diameter & cost to input----
+        System.out.println("Insert second pizza diameter:");
         int pizzaRadius2 = scanner.nextInt();
-        System.out.println("Write the pizza2 cost:");
+        System.out.println("Insert second pizza cost:");
         int pizzaCost2 = scanner.nextInt();
 
         double pizzaSize2 = 4*pizzaRadius2*pizzaRadius2*pi;
         double pizzaToSize2 = pizzaSize2 / pizzaCost2 ;
-        System.out.println("Pizza cost to size ratio is: "+pizzaToSize2);
+        System.out.println("Second pizza size to cost ratio is: "+pizzaToSize2);
 
+        //---check witch pizza is more profitable----
         if (pizzaToSize2 > pizzaSize) {
             System.out.println("Pizza 1 is more profitable than Pizza 2");
-            System.out.println("Better to buy pizza 1!");
+            System.out.println("BETTER TO BUY PIZZA 1!");
         }
         else {
             System.out.println("Pizza 2 is more profitable than Pizza 1");
